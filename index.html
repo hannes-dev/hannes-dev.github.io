@@ -10,7 +10,9 @@
         <div class="hi">Hi</div>
     </div>
     <div class="info">
-        How are you?
+        <svg viewBox="0 0 56 18">
+            <text x="4" y="10" >How are you?</text>
+        </svg>
     </div>
 </body>
 <style>
@@ -18,8 +20,14 @@
         background-color: #121212;
 
         font-family: sans-serif;
-        font-size: 200px;
         color: white;
+    }
+
+    svg, text {
+        width: 100%;
+        font-size: 0.7em;
+        text-align: center;
+        fill: white;
     }
 
     .hi {
@@ -28,6 +36,7 @@
         left: 50%;
         margin-right: -50%;
         transform: translate(-50%, -50%);
+        font-size: 200px;
     }
 
     .title {
