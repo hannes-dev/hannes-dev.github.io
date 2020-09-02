@@ -6,23 +6,40 @@
     <title>Hi</title>
 </head>
 <body>
-    <div class="hi">Hi</div>
-    
+    <div class="title">
+        <div class="hi">Hi</div>
+    </div>
+    <div class="info">
+        How are you?
+    </div>
 </body>
 <style>
     body {
-        background-color: #121212
-    }
-    .hi {
+        background-color: #121212;
+
         font-family: sans-serif;
         font-size: 200px;
         color: white;
+    }
 
+    .hi {
         position: absolute;
         top: 50%;
         left: 50%;
         margin-right: -50%;
         transform: translate(-50%, -50%);
+    }
+
+    .title {
+        height: 100vh;
+    }
+
+    .info {
+        height: 98vh;
+        background-color: rgb(255, 123, 0);
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 </style>
 
