@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table maker</title>
+
+    <style>
+        body, p {
+            color: white;
+            font-family: sans-serif;
+            background-color: #121212;
+        }
+    </style>
+</head>
+<body>
+    <input id="base">
+    <button onclick="makeTable()" id="tableBtn">Make table!</button>
+    <div id="table"></div>
+</body>
+<script>
+    let base = document.getElementById("base");
+
+    base.addEventListener("keyup", function(event) {
+        if (event.keyCode === 13) {
+            event.preventDefault();
+            document.getElementById("tableBtn").click();
+        }
+    });
+
+    let table = document.getElementById("table");
+
+    function makeTable() {
+        base = parseFloat(document.getElementById("base").value);
+        console.log(typeof base);
+        console.log(base);
+        table.innerText = '';
+
+        for (let i = 1; i < 21; i++) {
+            let newRow = document.createElement("p");
+            newRow.innerText = `${i}: ${Math.round((parseFloat(i) * base) * 100) / 100}`;
+            table.appendChild(newRow);
+
+            
+        }
+    }
+</script>
+</html>
