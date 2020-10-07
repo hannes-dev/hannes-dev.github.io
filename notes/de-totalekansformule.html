@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>De totalekansformule</title>
+</head>
+<body>
+    <div id="content"><p>Veronderstel dat $A_1,\ldots,A_n$ <a href="gebeurtenis.html">gebeurtenissen</a> zijn die een <a href="partitie-van-een-verzameling.html">partitie</a> vormen van de <a href="uitkomstenruimte.html">uitkomstenruimte</a> $S$. Veronderstel ook dat $P(A_i) \neq 0$ voor alle $i \in \{1,2,\ldots ,n\}$.<br />
+Dan geldt voor een willekeurige gebeurtenis $B \subseteq S$ dat<br />
+$$P(B) = P(A_1)P(B|A_1) + \cdots + P(A_n)P(B|A_n)$$</p>
+
+<p>---<span class="tag">Bewijs</span><br />
+We hebben $B = (B \cap A_1) \cup (B \cap A_2) \cup \cdots \cup (B \cap A_n)$, waabij $B \cap A_1, B \cap A_2, \ldots, B \cap A_n$ onderling <a href="disjuncte-gebeurtenissen.html">disjunct</a> zijn, aangezien ze een partitie vormen.<br />
+Bijgevolg geldt $P(B) = P(B \cap A_1) \cup P(B \cap A_2) \cup \cdots \cup P(B \cap A_n)$.<br />
+Het resultaat volgt nu door op elke term <a href="de-vermenigvuldigingsregel.html">de vermenigvuldigingsregel</a> toe te passen.<br />
+$\square$</p>
+
+<hr />
+
+<h6 id="voorbeeld">Voorbeeld</h6>
+
+<p>In een computer zitten drie geheugenmodules van 1GB, waarvan twee van merk 1 en één van merk 2. Als we willekeurig een bit schrijven naar een geheugenmodule van merk 1, dan is de kans op een geheugenfout $6 \cdot 10^{-18}$; bij geheugen van merk 2 is dit $3 \cdot 10^{-18}$. Als we nu willekeurig een bit wegschijven op onze computer, wat is dan de kans op een geheugenfout?</p>
+
+<p>We stellen $A_1$ gelijk aan de gebeurtenis dat we naar een geheugenmodule van merk 1 schrijven, en $A_2$ de gebeurtenis dat we naar de module van merk 2 schrijven. Als we $B$ gelijkstellen aan de gebeurtenis dat er zich een geheugenfout voordoet, dan is<br />
+$$P(B) = P(A_1)P(B|A_1) + P(A_2)P(B|A_2)$$<br />
+$$= \cfrac{2}{3} \cdot 6 \cdot 10^{-18} + \cfrac{1}{3} \cdot 3 \cdot 10^{-18}$$<br />
+$$= 5 \cdot 10^{-18}$$</p>
+
+<div class="backlinks">
+
+<h2 id="backlinks">Backlinks</h2>
+
+<ul>
+<li><a href="-stochastisch-onafhankelijke-gebeurtenissen.html">(stochastisch) onafhankelijke gebeurtenissen</a></li>
+<li><a href="de-regel-van-bayes.html">De regel van Bayes</a></li>
+<li><a href="discrete-wiskunde.html">Discrete Wiskunde</a></li>
+</ul>
+
+</div>
+</div>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script> <script> document.addEventListener("DOMContentLoaded", function () { renderMathInElement(document.body, { delimiters: [ {left: "$$", right: "$$", display: true}, {left: "\\[", right: "\\]", display: true}, {left: "$", right: "$", display: false}, {left: "\\(", right: "\\)", display: false} ] }); }); </script>
+</body>
+</html>

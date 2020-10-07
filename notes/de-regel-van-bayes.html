@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>De regel van Bayes</title>
+</head>
+<body>
+    <div id="content"><p>Veronderstel dat $A_1,\ldots,A_n$ <a href="gebeurtenis.html">gebeurtenissen</a> zijn die een <a href="partitie-van-een-verzameling.html">partitie</a> vormen van de <a href="uitkomstenruimte.html">uitkomstenruimte</a> $S$. Veronderstel ook dat $P(A_i) \neq 0$ voor alle $i \in \{1,2,\ldots,n\}$. Dan geldt voor een willekeurige gebeurtenis $B \subseteq S$ met $P(B) \neq 0$ dat<br />
+$$P(A_i|B) = \cfrac{P(A_i)P(B\ |\ A_i)}{P(B)} = \cfrac{P(A_i)P(B\ |\ A_i)}{P(A_1)P(B\ | \ A_1) + \cdots + P(A_n)P(B\ |\ A_n)}$$</p>
+
+<p>---<span class="tag">Bewijs</span><br />
+Merk op dat $P(A_i)P(B\ |\ A_i)$ en $P(B)P(A_i\ |\ B)$ gelijk zijn aangezien beide uitdrukkingen gelijk zijn aan $P(A_i \cap B)$ (volgens <a href="de-vermenigvuldigingsregel.html">de vermenigvuldigingsregel</a>).<br />
+Uit dat en de <a href="voorwaardelijk-kans.html">voorwaardelijke kans-formule</a> volgt de eerste gelijkheid.<br />
+De tweede gelijkheid volgt uit de eerste na toepassing van <a href="de-totalekansformule.html">de totalekansformule</a>.</p>
+
+<hr />
+
+<h6 id="gebruik">Gebruik</h6>
+
+<p>De regel van Bayes wordt vaak aangewend voor _interferentie_. Men kent een aantal mogelijke gebeurtenissen die tot een bepaald effect aanleiding kunnen geven. Als men dan dat effect observeert, wil men probabilistische conclusies kunnen trekken over de oorzaak van dat effect. Men zegt dat men de oorzaak _interfereert_. Hiervoor wordt de regel van Bayes toegepast, waarbij de gebeurtenissen $A_1,\ldots,A_n$ met de mogelijke oorzaken worden geassocieerd, en de gebeurtenis $B$ stelt het effect voor.</p>
+
+<h6 id="voorbeeld">Voorbeeld</h6>
+
+<p>We maken gebruik van het voorbeeld in <a href="de-totalekansformule#voorbeeld-de-totalekansformule">Voorbeeld|de totalekansformule</a>. Veronderstel dat onze computer op een bepaald moment crasht omwille van een geheugenfout. Wat is de kans dat deze fout plaatsvond in een module van merk 1?<br />
+We maken gebruik van de regel van Bayes met $B$ het effect (de crash) en $A_1$ een van de oorzaken (geheugen van merk 1)<br />
+$$P(A_1\ |\ B) = \cfrac{P(A_1)P(B\ |\ A_1)}{P(A_1)P(B\ |\ A_1) + P(A_2)P(B\ |\ A_2)}$$<br />
+$$= \cfrac{\cfrac{2}{3}\cdot 6 \cdot 10^{-18}}{\cfrac{2}{3} \cdot 6 \cdot 10^{-18} + \cfrac{1}{3} \cdot 3 \cdot 10^{-18}}$$<br />
+$$= \cfrac{4 \cdot 10^{-18}}{5 \cdot 10^{-18}} = \cfrac{4}{5}$$</p>
+
+<div class="backlinks">
+
+<h2 id="backlinks">Backlinks</h2>
+
+<ul>
+<li><a href="discrete-wiskunde.html">Discrete Wiskunde</a></li>
+</ul>
+
+</div>
+</div>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script> <script> document.addEventListener("DOMContentLoaded", function () { renderMathInElement(document.body, { delimiters: [ {left: "$$", right: "$$", display: true}, {left: "\\[", right: "\\]", display: true}, {left: "$", right: "$", display: false}, {left: "\\(", right: "\\)", display: false} ] }); }); </script>
+</body>
+</html>

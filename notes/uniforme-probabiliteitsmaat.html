@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Uniforme probabiliteitsmaat</title>
+</head>
+<body>
+    <div id="content"><p>We noemen $P$ een uniforme <a href="probabiliteitsmaat.html">probabiliteitsmaat</a> of een uniforme probabiliteitsdistributie als elk element van de <a href="uitkomstenruimte.html">uitkomstenruimte</a> hetzelfde <a href="probabiliteitsgewicht.html">probabiliteitsgewicht</a> heeft.</p>
+
+<p>---<span class="tag">Bewijs</span><br />
+Veronderstel dat $P$ een <ins>uniforme probabiliteitsmaat</ins> is op een uitkomstenruimte $S$. Dan geldt voor elke gebeurtenis $E \subseteq S$ dat<br />
+$$P(E) = \cfrac{|E|}{|S|}$$</p>
+
+<p>Stel $S = \{x_1, \ldots,x_n\}$ met $n = |S|$; dan is, voor elke $i \in \{1,\ldots,n\}$,<br />
+$$1 = P(S) = P(x_1) + \ldots + P(x_n) = n \cdot P(x_i)$$<br />
+en dus is $P(x_i) = 1/n$. Voor elke $E \subseteq S$ geldt dan<br />
+$$P(E) = \sum_{x \in E} P(x) = \sum_{x \in E} \cfrac{1}{n} = \cfrac{|E|}{n}$$</p>
+
+<div class="backlinks">
+
+<h2 id="backlinks">Backlinks</h2>
+
+<ul>
+<li><a href="discrete-wiskunde.html">Discrete Wiskunde</a></li>
+</ul>
+
+</div>
+</div>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script> <script> document.addEventListener("DOMContentLoaded", function () { renderMathInElement(document.body, { delimiters: [ {left: "$$", right: "$$", display: true}, {left: "\\[", right: "\\]", display: true}, {left: "$", right: "$", display: false}, {left: "\\(", right: "\\)", display: false} ] }); }); </script>
+</body>
+</html>
