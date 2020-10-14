@@ -6,42 +6,39 @@
     <title>Hi</title>
 </head>
 <body>
-    <div class="title">
-        <div class="hi">Hi</div>
+    <div class="titleWrapper">
+        <h1 class="title">Hi</h1>
     </div>
     <div class="info">
-        How are you?
+        <p>How are you?</p>
     </div>
 </body>
 <style>
-    body {
-        background-color: #121212;
-        font-family: sans-serif;
-        color: white;
+    html, body {
+        height: 100%;
+        margin: 0;
     }
 
-    .hi {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%);
-        font-size: 200px;
+    body {
+        font-family: sans-serif;
+        color: white;
+        background-color: #121212;
     }
 
     .title {
-        height: 100vh;
+        font-size: 14rem;
     }
 
-    .info {
-        height: 98vh;
-        background-color: rgb(255, 123, 0);
+    .titleWrapper, .info {
         display: flex;
         justify-content: center;
         align-items: center;
+        height: 100%;
+    }
 
-        font-size: 10vmin
+    .info {
+        background-color: #FF8000;
+        font-size: 10vmin;
     }
 </style>
-
 </html>
